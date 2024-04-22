@@ -1,0 +1,188 @@
+{% extends 'base.html' %}
+{% block title %}
+Welcome to Welocome to Aloha
+{% endblock %}
+{% block content %}
+
+
+<!-- <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark" style="color:white">
+    <div class="col-md-5 p-lg-5 mx-auto my-5">
+        
+        <h1 class="display-4 font-weight-normal">Welocome to Aloha</h1>
+        <p class="lead font-weight-normal">Read Book Reviews Here</p>
+        <a class="btn btn-primary" href="{{ url_for('login_page') }}">Get Started</a>
+    </div>
+    <div class="product-device box-shadow d-none d-md-block"></div>
+    <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
+</div> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="intro-section">
+        <div class="intro-tags">
+            <h1>WELCOME TO ALOHA</h1>
+            <h2>Reviewing Reads, Sharing Insights</h2>
+            <div class="get-started">
+                <button class="get-started-button"><a href="{{ url_for('login_page') }}" style="color: white;">GET STARTED</a></button>
+            </div>
+        </div>
+    </div>
+    <div class="about_us_heading">
+        <h1> About Us </h1>
+    </div>
+    <div class="about_us">
+        <!-- <h3>About Us</h3> -->
+        <div class="about_us_image">
+            <img src="https://cdn.lifehack.org/wp-content/uploads/2023/03/41i2576lMAL._SL500_.webp" alt="about-image" class="left_side"> 
+        </div>
+        <div class="about_us_info">
+            
+            <p>Aloha is a dynamic online platform designed for passionate readers and book enthusiasts. This book review website serves as a social hub where users can openly express their thoughts and opinions on the books they've read and engage in meaningful discussions with fellow book lovers.
+
+                At Aloha, users can create and publish their own book reviews, offering valuable insights and recommendations to the community. It's a space for personal expression and a place to connect with others who share similar literary interests.Aloha promotes diversity, encompassing a wide range of book genres, from classic literature to contemporary fiction, non-fiction, fantasy, and more. Users can explore beyond their usual reading preferences and discover new literary treasures.</p>
+        </div>
+        <div class="about_us_image">
+            <img src="https://www.bookgeeks.in/wp-content/uploads/2018/01/The-Guide-RK-Narayan.jpg" alt="about-image" > 
+        </div>
+    </div>
+    <div class="facilities_heading">
+        <h1> Facilities You'll Enjoy </h1>
+    </div>
+    <div class="facilities">
+
+        <div class="facility_cards">
+            <i class="fa-solid fa-user-pen"></i>
+            <h2>Write Your Own Review</h2>
+            <p>Share your thoughts on the books you have read and let others know what you thought of them.</p>
+        </div>
+        <div class="facility_cards">
+            <i class="fa-solid fa-book-open-reader"></i>
+            <h2>Explore Diverse Books</h2>
+            <p>Discover a variety of books spanning different genres, cultures, and topics, enriching your reading experience.</p>
+        </div>
+        <div class="facility_cards">
+            <i class="fa-solid fa-pen"></i>
+            <h2>Share Your Thoughts</h2>
+            <p>Express your opinions, ideas, and feelings, fostering open discussions and enriching the collective knowledge.</p>
+        </div>
+    </div>
+        
+</body>
+<style>
+    .intro-section{
+        background-image: url("https://rare-gallery.com/thumbs/5363663-book-railing-library-shelves-reading-literature-writer-author-blogging-perspective-depth-of-field-light-library-interior-sweden-stockholm-png-images.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        object-fit: contain;
+        height: 100vh;
+        background-position: center;
+    }
+    .intro-tags{
+        background-color: rgba(0, 0, 0, 0.249);
+        padding: 40vh 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+    }
+    .intro-tags h1{
+        font-size: 120px;
+        color:white
+    }
+    .intro-tags h2{
+        padding: 10px;
+        color:white
+    }
+    
+    .get-started-button{
+        width: 200px;
+        height: 40px;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        background-color: red;
+        cursor: pointer;
+    }
+    
+    .facilities{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        
+    }
+    .facility_cards{
+        width: 300px;
+        height: 400px;
+        background-color: rgba(255, 0, 0, 0.708);
+        margin: 50px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+        
+    }
+    .facility_cards i{
+        font-size: 100px;
+        padding: 20px;
+    }
+    .facility_cards i:hover{
+        transform: scale(1.2,1.2)
+    }
+    .facilities_heading{
+        margin: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .facility_cards h2{
+        text-align:center;
+    }
+    .facility_cards p{
+        text-align:center;
+        padding: 10px;
+    }
+    .about_us{
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+        flex-wrap: wrap;
+    }
+    .about_us_info{
+        width: 50vw;
+        height: 340px;
+        background-color: aqua;
+        border-radius: 20px;
+        margin: 25px;
+        padding: 20px;
+        text-align: justify;
+        font-size: 20px;
+    }
+    .about_us_image{
+        width: 18vw;
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+    }
+    .about_us_heading{
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .left_side{
+        width: 231px;
+        height: 350px;
+    }
+</style>
+<script src="https://kit.fontawesome.com/609f2d8e66.js" crossorigin="anonymous"></script>
+</html>
+
+{% endblock %}
